@@ -2,7 +2,7 @@
 
 This piece of code is an introduction to how malwares (more specifically, viruses) work. The example is done entirely in Ruby and commented wherever necessary to help you understand and replicate it in any other language you desire.
 
-# DISCLAIMER
+# Disclaimer
 For all intents, this is strictly for educational purposes, and is by no means a way to actually start designing viruses and infecting systems. <font color='red'>I claim no responsibility for any harmful virus created off of this guide</font>.
 
 # Background

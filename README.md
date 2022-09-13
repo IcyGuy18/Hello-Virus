@@ -2,6 +2,9 @@
 
 This piece of code is an introduction to how malwares (more specifically, viruses) work. The example is done entirely in Ruby and commented wherever necessary to help you understand and replicate it in any other language you desire.
 
+# DISCLAIMER
+For all intents, this is strictly for educational purposes, and is by no means a way to actually start designing viruses and infecting systems. I claim no responsibility for any harmful virus created off of this guide.
+
 # Background
 A virus is a type of malware that, upon execution, infects the system it is on with an encrypted and sensitive code designed to harm entire system through various methodologies. Three types of viruses are commonly devised and distributed in the wild web:
 - Oligomorphic virus: these kind of viruses tend to have an encrypted sequence of code (encrypted segment) with a key known only to the executable, and a set of keys used for decryption (let's call this the decryptor segment). The encrypted and decrypted segments are piled onto one another alongside the main executable. It can be either at the beginning of the file, in the middle disjointed, or at the very end - or perhaps a combination. What happens is, upon execution, the virus picks up the stored key and uses it to decrypt the encrypted part of the code required for infecting the system. Once it has decrypted the code, the virus executes the commands, with or without the main program's commands. Once it is terminating, the virus picks up a random key from the set of keys in the decryptor segment and uses it to re-encrypt the sensitive part of the code, all the while storing the new key inside itself for decryption upon executing again.

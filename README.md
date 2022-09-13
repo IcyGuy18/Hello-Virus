@@ -1,6 +1,6 @@
 # Hello-Virus
 
-This here piece of code is an introduction to how malwares (more specifically, viruses) work. The example is done entirely in Ruby and commented wherever necessary to help you understand and replicate it in any other language you desire.
+This piece of code is an introduction to how malwares (more specifically, viruses) work. The example is done entirely in Ruby and commented wherever necessary to help you understand and replicate it in any other language you desire.
 
 # Background
 A virus is a type of malware that, upon execution, infects the system it is on with an encrypted and sensitive code designed to harm entire system through various methodologies. Three types of viruses are commonly devised and distributed in the wild web:

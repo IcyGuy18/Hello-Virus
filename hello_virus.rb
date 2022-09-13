@@ -49,13 +49,13 @@ def decryptor(key)
 			rewrite = true
 		elsif $f_data[i] == "#End"
 			rewrite = false
-			ciphertext = Base64.strict_decode64($payload) # 1 to -1 because the first character will be for commenting the ciphertext
+			ciphertext = Base64.strict_decode64($payload)
 			plaintext = cipher.update(ciphertext) + cipher.final
 			new_data.push(plaintext)
 			new_data.push($f_data[i])
 			$payload = ''
 		elsif rewrite == true and $f_data[i] != ""
-			$payload += $f_data[i][1..-1]
+			$payload += $f_data[i][1..-1] # 1 to -1 because the first character will be for commenting the ciphertext
 		else
 			new_data.push($f_data[i])
 		end
